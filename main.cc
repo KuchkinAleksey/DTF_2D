@@ -45,7 +45,7 @@ int main()
       if (Mag[idx] > mag_max) mag_max = Mag[idx];
       if (Mag[idx] < mag_min) mag_min = Mag[idx];
 
-      std::cout << idx+1 << "/" << len << "\r";
+      std::cout << idx+1 << "/" << len << " " << Re << " + " << Im << "j" << "\n";
     }
   }
 
@@ -64,7 +64,7 @@ int main()
 
   stbi_write_png((kResourcesDir+std::string("out.png")).c_str(), w, h, comp, out, w);
 
-  //std::getchar();
+  std::getchar();
 
   return 0; 
 }
